@@ -1,4 +1,4 @@
-# Parquet File Comparison Tool
+# Parquet File Comparison
 
 ## Overview
 This tool automates the comparison of Parquet files from two different snapshots, extracts differences, and stores the results in both JSON and CSV formats. It also inserts the comparison data into a MySQL database.
