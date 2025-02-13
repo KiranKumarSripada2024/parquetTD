@@ -27,15 +27,15 @@ db_conn = mysql.connector.connect(
 )
 cursor = db_conn.cursor()
 
-# Automatically setting sysdate and sysdate-1 here.
-date1 = datetime.now().strftime("%Y-%m-%d")  # SYSDATE
-date2 = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")  # SYSDATE-1
+# Automatically setting sysdate-1 and sysdate-2 here.
+date1 = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")  # SYSDATE-1
+date2 = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")  # SYSDATE-2
 
 
 # Paths for downloaded files
-download_dir = "zip_downloads_BatchDelta"
-json_directory = "json_BatchDelta"  # Directory for output JSON files
-csv_directory = "csv_BatchDelta" # Directory for output CSV files
+download_dir = "zip_downloads_TimedDelta"
+json_directory = "json_TimedDelta"  # Directory for output JSON files
+csv_directory = "csv_TimedDelta" # Directory for output CSV files
 os.makedirs(csv_directory, exist_ok=True)
 os.makedirs(download_dir, exist_ok=True)
 os.makedirs(json_directory, exist_ok=True)
